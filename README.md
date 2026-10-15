@@ -68,6 +68,10 @@ No blocking `delay()` calls are used.
 
 Serial communication operates at 9600 baud.
 
+## Hardware Demonstration
+
+[Watch the Arduino Light Controller Demo](media/ProgrammableLightController_Demo.mp4)
+
 ## Build and Upload
 
 1. Install Arduino IDE 2.
