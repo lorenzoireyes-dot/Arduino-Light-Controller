@@ -51,10 +51,10 @@ A demonstration video is part of the project. See the repository files for the u
 
 ## Memory footprint comparison
 
-See [COMPARISON.md](COMPARISON.md) for measured flash and static SRAM usage, percentage differences, engineering interpretation, and placeholders for compiler-output screenshots. CPU execution time and interrupt latency will be documented separately after measurement.
+See [COMPARISON.md](COMPARISON.md) for measured flash and static SRAM usage, percentage differences, engineering interpretation, and supporting compiler-output screenshots.
 
 ## Development and comparison
 
-All three implementations use the same controller requirements. The standalone AVR-GCC version compiled to **1,762 bytes of flash and 256 bytes of static SRAM** using `-Os`. A consistent three-way comparison of flash usage, SRAM usage, execution timing, and maintainability is planned.
+All three implementations use the same controller requirements. The standalone AVR-GCC version compiled to **1,762 bytes of flash and 256 bytes of static SRAM** using `-Os`. The completed [memory comparison](COMPARISON.md) documents the flash and SRAM tradeoffs across all three implementations.
 
-**Verification:** Mode selection, LED timing, button operation, serial communication, and EEPROM persistence have been exercised on the Arduino Uno R3. Cross-implementation benchmark results are not yet available.
+**Verification:** Mode selection, LED timing, button operation, serial communication, and EEPROM persistence have been exercised on the Arduino Uno R3. Flash and static SRAM comparisons are documented; execution time and interrupt latency were not benchmarked.
