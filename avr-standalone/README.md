@@ -2,7 +2,7 @@
 
 **ATmega328P · Arduino Uno R3 · AVR-G++ · No Arduino core**
 
-This is the third implementation of the [Programmable Light Controller](../README.md). It recreates the Arduino-framework and AVR register-level controllers as a standalone embedded C++ application with an `int main(void)` entry point, built directly with AVR-G++ and uploaded through the Arduino Uno R3 bootloader using AVRDUDE.
+This is the third implementation of the [Programmable Light Controller](../README.md). It recreates the Arduino framework and AVR register controllers as a standalone embedded C++ application with an `int main(void)` entry point, built directly with AVR-G++ and uploaded through the Arduino Uno R3 bootloader using AVRDUDE.
 
 ## Hardware
 
@@ -17,9 +17,9 @@ This is the third implementation of the [Programmable Light Controller](../READM
 |---|---|
 | GPIO | Direct `DDRB`, `PORTB`, `DDRD`, `PORTD`, `PIND` register access |
 | Timebase | Timer1 in CTC mode, 1 ms interrupt |
-| Interrupts | Timer1 compare-match ISR and INT0 falling-edge ISR |
-| Button | 40 ms polling-based debounce; 1.5 s long press resets to OFF |
-| Controller | Nonblocking four-mode finite state machine |
+| Interrupts | Timer1 compare-match ISR and INT0 falling edge ISR |
+| Button | 40 ms polling debounce; 1.5 s long press resets to OFF |
+| Controller | Nonblocking finite state machine |
 | Serial | USART0 transmit/receive via hardware registers |
 | Persistence | Direct EEPROM access at address 0, avoiding redundant writes |
 
