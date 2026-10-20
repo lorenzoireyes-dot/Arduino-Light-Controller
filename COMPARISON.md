@@ -38,31 +38,19 @@ Add the original screenshots to `comparison-evidence/` and replace the placehold
 
 ### Arduino Framework — Arduino IDE compilation output
 
-> **Screenshot pending:** `comparison-evidence/arduino-framework-memory.png`
-
-<!-- After uploading, replace the placeholder above with:
-![Arduino Framework compilation output](comparison-evidence/arduino-framework-memory.png)
--->
+> **Screenshot:** ![Arduino Framework compilation output](comparison-evidence/arduino-framework-memory.png)
 
 Observed output: **3,332 bytes flash; 248 bytes global/static SRAM**.
 
 ### AVR Register-Level — Arduino IDE compilation output
 
-> **Screenshot pending:** `comparison-evidence/avr-register-level-memory.png`
-
-<!-- After uploading, replace the placeholder above with:
-![AVR register-level compilation output](comparison-evidence/avr-register-level-memory.png)
--->
+> **Screenshot:** ![AVR register-level compilation output](comparison-evidence/avr-register-level-memory.png)
 
 Observed output: **1,876 bytes flash; 311 bytes global/static SRAM**.
 
 ### Standalone AVR-GCC — avr-size output
 
-> **Screenshot pending:** `comparison-evidence/avr-standalone-memory.png`
-
-<!-- After uploading, replace the placeholder above with:
-![Standalone AVR-GCC avr-size output](comparison-evidence/avr-standalone-memory.png)
--->
+> **Screenshot:** ![Standalone AVR-GCC compilation output](comparison-evidence/avr-standalone-memory.png)
 
 Observed output: **1,762 bytes flash; 256 bytes static SRAM**.
 
