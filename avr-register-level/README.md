@@ -1,4 +1,4 @@
-# AVR Register-Level Implementation
+# AVR Register Level Implementation
 
 This implementation recreates the Arduino light controller using direct ATmega328P register access in C++. It has been tested on an Arduino Uno R3.
 
@@ -26,11 +26,11 @@ INT0 records button activity; the actual debouncing and release detection use po
 - **BLINK:** LED toggles every 500 ms
 - **TIMED:** LED on for 10 seconds, then automatically OFF
 
-Short press cycles modes; long press resets to OFF. Serial commands: `0`, `1`, `2`, `3`, `n`, `s`, `h`. Mode changes are reported over serial. User-selected modes persist across resets and power loss. TIMED automatic expiration does not overwrite the stored selection.
+Short press cycles modes; long press resets to OFF. Serial commands: `0`, `1`, `2`, `3`, `n`, `s`, `h`. Mode changes are reported over serial. User selected modes persist across resets and power loss. TIMED automatic expiration does not overwrite the stored selection.
 
 ## Hardware and testing
 
-Arduino Uno R3 (16 MHz ATmega328P), onboard D13 LED, and a pushbutton wired from D2 to GND using the internal pull-up. Tested with Arduino IDE 2 and its Serial Monitor.
+Arduino Uno R3 (16 MHz ATmega328P), onboard D13 LED, and a pushbutton wired from D2 to GND using the internal pull up. Tested with Arduino IDE 2 and its Serial Monitor.
 
 ## Next steps
 
