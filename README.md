@@ -2,16 +2,17 @@
 
 **Arduino Uno R3 · ATmega328P · Embedded C++**
 
-Two implementations of the same programmable LED controller: one built with the Arduino framework and one using direct AVR peripheral registers. Both have been tested on physical hardware.
+Three implementations of the same programmable LED controller, progressing from Arduino framework APIs to direct AVR register access and a standalone AVR-GCC application. All three have been tested on physical hardware.
 
 ## Implementations
 
 | Implementation | Approach | Status |
 |---|---|---|
 | [Arduino framework](arduino-framework/README.md) | Arduino GPIO, timing, serial, interrupt, and EEPROM APIs | Functional; hardware tested |
-| [AVR register-level](avr-register-level/README.md) | Direct GPIO, Timer1, INT0, USART0, and EEPROM registers | Functional; hardware tested |
+| [AVR register-level](avr-register-level/README.md) | Direct GPIO, Timer1, INT0, USART0, and EEPROM registers in an Arduino `.ino` sketch | Functional; hardware tested |
+| [Standalone AVR-GCC](avr-standalone/README.md) | Direct registers and a conventional `main()`; no Arduino core | Compiled, uploaded, hardware tested |
 
-**Note:** The AVR register-level version is currently compiled as an Arduino `.ino` sketch using `setup()` and `loop()`. A standalone AVR-GCC `main()` build is planned; the Arduino core has not yet been removed.
+**Implementation distinction:** The AVR register-level `.ino` version still uses Arduino startup infrastructure. The standalone AVR-GCC version uses its own `main()` and does not link the Arduino core.
 
 ## Controller behavior
 
@@ -50,6 +51,6 @@ A demonstration video is part of the project. See the repository files for the u
 
 ## Development and comparison
 
-Both implementations use the same controller requirements so their architectures can be compared. The register-level version configures peripherals directly; the framework version uses Arduino APIs. Planned work includes a standalone AVR-GCC build and measured comparisons of flash usage, SRAM usage, execution timing, and maintainability.
+All three implementations use the same controller requirements. The standalone AVR-GCC version compiled to **1,762 bytes of flash and 256 bytes of static SRAM** using `-Os`. A consistent three-way comparison of flash usage, SRAM usage, execution timing, and maintainability is planned.
 
-**Verification:** Mode selection, LED timing, button operation, serial communication, and EEPROM persistence have been exercised on the Arduino Uno R3. No benchmark results are claimed yet.
+**Verification:** Mode selection, LED timing, button operation, serial communication, and EEPROM persistence have been exercised on the Arduino Uno R3. Cross-implementation benchmark results are not yet available.
