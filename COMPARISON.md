@@ -34,7 +34,7 @@ Changes are relative to the first implementation named in each row. A positive S
 
 ## Compilation evidence
 
-Add the original screenshots to `comparison-evidence/` and replace the placeholders below with actual image links. Keep the screenshots unedited where possible so the compiler output and selected target board remain visible.
+Compiler-output screenshots for each implementation are included below.
 
 ### Arduino Framework — Arduino IDE compilation output
 
@@ -66,11 +66,6 @@ Observed output: **1,762 bytes flash; 256 bytes static SRAM**.
 
 **Static SRAM is not peak runtime SRAM.** The reported values include statically allocated data but do not measure stack high-water mark, available stack headroom, or worst-case interrupt nesting.
 
-## Separate performance investigations
+## Scope and limitations
 
-CPU execution time and interrupt latency will be measured and documented **independently**, rather than inferred from firmware size:
-
-- **[CPU Execution Time Comparison](CPU-EXECUTION-TIME.md)** — separate study, not yet measured/documented
-- **[Interrupt Latency Comparison](INTERRUPT-LATENCY.md)** — separate study, not yet measured/documented
-
-These links are planned document names; the files will be created when each investigation begins. No CPU-speed or interrupt-latency conclusions are claimed in this memory-footprint study.
+This comparison evaluates compiled flash and static SRAM footprints. CPU execution time and interrupt latency were not measured, so no performance or latency claims are made. These measurements do not include peak stack usage.
