@@ -12,7 +12,7 @@ Three implementations of the same programmable LED controller, progressing from 
 | [AVR register-level](avr-register-level/README.md) | Direct GPIO, Timer1, INT0, USART0, and EEPROM registers in an Arduino `.ino` sketch | Functional; hardware tested |
 | [Standalone AVR-GCC](avr-standalone/README.md) | Direct registers and a conventional `main()`; no Arduino core | Compiled, uploaded, hardware tested |
 
-**Implementation distinction:** The AVR register-level `.ino` version still uses Arduino startup infrastructure. The standalone AVR-GCC version uses its own `main()` and does not link the Arduino core.
+**Implementation distinction:** The AVR-register-level `.ino` version still uses Arduino startup infrastructure. The standalone AVR-GCC version uses its own `main()` and does not link the Arduino core.
 
 ## Controller behavior
 
@@ -23,7 +23,7 @@ Three implementations of the same programmable LED controller, progressing from 
 | BLINK | Toggles every 500 ms |
 | TIMED | On for 10 seconds, then automatically returns to OFF |
 
-A short press of the button advances to the next mode. Holding it for 1.5 seconds resets to OFF. Input debouncing uses a 40 ms stable-state interval. User-selected modes are stored in EEPROM and restored at startup; automatic TIMED expiration does not overwrite the stored selection.
+A short press of the button advances to the next mode. Holding it for 1.5 seconds resets to OFF. Input debouncing uses a 40 ms interval. User selected modes are stored in EEPROM and restored at startup; automatic TIMED expiration does not overwrite the stored selection.
 
 ## Hardware
 
