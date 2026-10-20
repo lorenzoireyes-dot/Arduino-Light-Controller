@@ -67,8 +67,8 @@ These figures come from `avr-size -C --mcu=atmega328p firmware.elf`. The static 
 
 The complete firmware was compiled, converted to Intel HEX, and uploaded successfully to the Arduino Uno R3 with AVRDUDE. The physical button and serial-command interface have been tested on hardware, with the same controller behavior as the earlier implementations.
 
-**Demonstration video:** `media/StandaloneAVR_Demo.mp4` (to be uploaded).
+**Demonstration video:** [Standalone AVR-GCC hardware demonstration](media/StandaloneAVR_Demo.mp4).
 
-## Next step
+## Memory comparison
 
-Compare flash/SRAM usage and implementation tradeoffs across the [Arduino framework](../arduino-framework/README.md), [AVR register-level](../avr-register-level/README.md), and standalone AVR-GCC versions.
+See the completed [three-way flash and SRAM comparison](../COMPARISON.md) for measured results and compilation evidence.
