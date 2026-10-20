@@ -2,7 +2,7 @@
 
 This implementation recreates the Arduino light controller using direct ATmega328P register access in C++. It has been tested on an Arduino Uno R3.
 
-**Build distinction:** The current source is an Arduino `.ino` sketch and still uses Arduino's startup infrastructure. It does not use Arduino's GPIO, timing, serial, or EEPROM APIs for the controller logic. A standalone AVR-GCC `main()` version is planned.
+**Build distinction:** The current source is an Arduino `.ino` sketch and still uses Arduino's startup infrastructure. It does not use Arduino's GPIO, timing, serial, or EEPROM APIs for the controller logic. A separate [standalone AVR-GCC `main()` implementation](../avr-standalone/README.md) has also been completed.
 
 ## Peripherals and implementation
 
@@ -32,6 +32,6 @@ Short press cycles modes; long press resets to OFF. Serial commands: `0`, `1`, `
 
 Arduino Uno R3 (16 MHz ATmega328P), onboard D13 LED, and a pushbutton wired from D2 to GND using the internal pull up. Tested with Arduino IDE 2 and its Serial Monitor.
 
-## Next steps
+## Comparison
 
-Move the source into a standalone AVR-GCC project with `main()`, then measure flash, SRAM, and timing against the [Arduino framework implementation](../arduino-framework/README.md).
+See the completed [flash and SRAM comparison](../COMPARISON.md) across the Arduino Framework, AVR Register-Level, and Standalone AVR-GCC implementations.
