@@ -49,6 +49,10 @@ A short press of the button advances to the next mode. Holding it for 1.5 second
 
 A demonstration video is part of the project. See the repository files for the uploaded media.
 
+## Memory footprint comparison
+
+See [COMPARISON.md](COMPARISON.md) for measured flash and static SRAM usage, percentage differences, engineering interpretation, and placeholders for compiler-output screenshots. CPU execution time and interrupt latency will be documented separately after measurement.
+
 ## Development and comparison
 
 All three implementations use the same controller requirements. The standalone AVR-GCC version compiled to **1,762 bytes of flash and 256 bytes of static SRAM** using `-Os`. A consistent three-way comparison of flash usage, SRAM usage, execution timing, and maintainability is planned.
